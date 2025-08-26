@@ -3,5 +3,9 @@
   "extends": [
     "config:best-practices"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": false
+  },
   "prConcurrentLimit": 5
 }
