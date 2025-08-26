@@ -1,0 +1,18 @@
+name: Run tests
+description: Runs the `ci/test.sh` script of a project
+
+runs:
+  using: composite
+  steps:
+    - name: Run tests
+      working-directory: "."
+      run: |
+        echo "Looking for custom test script at ci/test.sh."
+        if [ -f "ci/test.sh" ]
+        then
+          echo "Found custom test script, executing..."
+          sh -euxo pipefail ci/test.sh -e int -p renovate-lockfile-issue-repo }}
+        else
+          echo "No custom test script provided."
+        fi
+      shell: bash

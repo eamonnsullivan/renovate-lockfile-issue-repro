@@ -1,0 +1,26 @@
+{
+  "name": "renovate-lockfile-issue-repo",
+  "version": "0.0.0",
+  "scripts": {
+    "test:ci": "npm run typecheck && ENV=dev jest --coverage --forceExit",
+    "typecheck": "lerna run typecheck"
+  },
+  "author": "",
+  "workspaces": [
+    "packages/package1"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "8.40.0",
+    "@typescript-eslint/parser": "8.40.0",
+    "typescript": "^5.7.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-environment-node": "^29.7.0",
+    "jsdom": "26.1.0",
+    "lerna": "^8.2.2"
+  },
+  "overrides": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
